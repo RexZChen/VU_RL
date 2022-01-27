@@ -1,0 +1,28 @@
+Dear Grader:
+
+How to run the code (will automatically save ALL trained policies locally):
+• STEP-0:python main.py --meta_iteration 300 --num_adapt_steps 0 --meta_batch_size 40 -K 10 -- meta_lr 1e-4 --alpha 0.1 > 0_adapt_output
+• STEP-1:python main.py --meta_iteration 300 --num_adapt_steps 1 --meta_batch_size 40 -K 10 -- meta_lr 1e-4 --alpha 0.1 > 1_adapt_output
+• STEP-2:python main.py --meta_iteration 300 --num_adapt_steps 2 --meta_batch_size 40 -K 10 -- meta_lr 1e-4 --alpha 0.1 > 2_adapt_output
+PS: Better performance might be achieved if the meta_iteration is higher, but due to the limited time, I was not able to finish all hyper-parameter search.
+Testing performance will be shown while training.
+
+Check exported environments under py_envs folder:
+• Win11 env: PC_{env_name}
+• Mac env: MAC_{env_name}
+
+See saved "best" policies under saved_policy_{num_of_steps}
+• PS: Actual performance might differ due to different system configurations
+
+See report: Reinforcement_Learning.pdf
+
+Reference:
+https://github.com/rll/rllab
+https://github.com/openai/spinningup
+https://github.com/RexZChen/DRL
+
+If you are encountered with any trouble running my code, please let me know.
+
+Happy end of semester and happy holidays!
+
+Zirong Chen

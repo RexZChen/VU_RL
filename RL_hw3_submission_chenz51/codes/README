@@ -1,0 +1,35 @@
+Dear grader,
+Before you go through my code files, I want to mention several important things
+about my implementation:
+
+1. Both actor.py and agent.py are abstract classes for future actors and agents,
+   all actors and agents will inherit their corresponding class.
+2. [alg_name]_networks.py store MLPActor, MLPCritic and MLPActorCritic classes,
+   which will further be key components in agent-realted files.
+3. [alg_name]_chenz51.py store agent objects for different algorithm, it has to
+   overwrite the initialization function and the train function predefined in agent.py.
+4. In both train and test files, there will be three different DDPG algorithms:
+      (1) ddpg(): DDPG with traj-wise control
+      (2) ddpg_steos(): DDPG with step-wise control
+      (3) ddpg_new(): DDPG traj-wise control but with newly designed buffer
+      PS: DDPG on LunarLander does not guarantee to have convergence.
+5. All on-policy and off-policy replay buffers are implemented under utils.py.
+6. All parameters are store under [VPG, DDPG]_[MontainCar, LunarLander].h5 and by running
+   test files, the parameters are supposed to be loaded automatically.
+7. A few environments are created for development, all of them are uploaded as .yml files.
+   To clone the environment where I ran most my experiments, use RL_chenz51.yml, if it
+   doesn't work, please try other environments instead.
+8. All images including plotting files are under folder /img.
+9. All videos are uploaded to folder /RL_videos.
+10. See report at Reinforcement Learning Assignment 3.docx
+
+REFERENCE:
+Implementation of RL algorithms from OpenAI @ Spinning Up
+See website @ https://spinningup.openai.com/en/latest/index.html
+See code @ https://github.com/openai/spinningup
+
+If any trouble is encountered during running my code, please contact me via zirong.chen@vanderbilt.edu
+
+Have a wonderful day!
+
+Zirong Chen
